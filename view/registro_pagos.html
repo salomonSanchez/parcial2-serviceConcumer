@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formación | Impacto Tecnologico</title>
+
+    <link rel="stylesheet" href="../assets/css/boostrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/login.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid background-color">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <center>
+                        <img src="../assets/img/avatar.png" class="menu-img">
+                    </center>
+
+                    <div class="menu">
+                        <ul>
+                            <li><a href="home.html">Inicio</a></li>
+                            <li><a href="Listar_cursos.html">Cursos</a></li>
+                            <li><a href="#" id="pagosList" class="active">Pagos</a></li>
+                            <li><a href="matricula.html">Matricula</a></li>
+                            <li onclick="closedLogin()"><a href="#" id="close">Cerrar sesión</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="col-md-12">
+                    <div class="container">
+                        <div class="card h-100 jumbotron my-4">
+
+                            <!-- form start -->
+                            <form id="pagosForm">
+                                <div class="form-header">
+                                    <h3 class="form-title"><i class="fa fa-user"></i> Registar Pagos</h3>
+                                </div>
+                                <div id="msgContactSubmitpago" class="hidden"></div>
+                                <div class="form-body my-4">
+
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label for="tcuenta_id" class="control-label">Monto de pago</label>
+                                            <input type="number" class="form-control" id="monto_pago" min="0" required>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="to">cod Estudiante:</label>
+                                            <input type="number" class="form-control" id="estudiante_id" required pattern="[0-9]+" title="No se aceptan letras, solo numeros ">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+
+                                        <div class="col col-md-6">
+                                            <label for="to">Cod curso</label>
+                                            <input type="number" class="form-control" id="curso_id" min="0" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-footer col-md-4">
+                                    <div class="row">
+                                        <button type="submit" class="btn btn-success">Registrar Pago!</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                    <!-- /.container -->
+                    <div class="container">
+                        <div class="card h-100 jumbotron my-4">
+                            <!-- form start -->
+                            <form id="buscarpagosForm">
+                                <div class="form-header">
+                                    <h3 class="form-title"><i class="fa fa-user"></i>Buscar Registro</h3>
+                                    <div id="msgTablapagos" class="hidden"></div>
+                                </div>
+                                <div class="form-body my-4">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="el_bpago" placeholder="Buscar pago ">
+                                        </div>
+                                        <div>
+                                            <button id="buscacuenta" class="btn btn-success">Actualizar registros</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <table id="tabla_pagos" class="table table-bordered table-hover table-wrapper-scroll-y ">
+                                        <thead>
+                                            <tr class="table-primary">
+                                                <th scope="col">Numero</th>
+                                                <th scope="col">cod. Estudiante</th>
+                                                <th scope="col">cod. curso </th>
+                                                <th scope="col">Monto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabla_body_pagos">
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                        </div>
+                    </div>
+                    <!-- /.container -->
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="../controlador/formControler.js"></script>
+    <script src="../assets/js/paginate.js"></script>
+</body>
+
+</html>

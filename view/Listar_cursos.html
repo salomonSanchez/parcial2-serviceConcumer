@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nosotros | Impacto Tecnologico</title>
+    <link rel="stylesheet" href="../assets/css/boostrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"> -->
+
+    <script type="text/javascript" src="../assets/js/login.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid background-color">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <center>
+                        <img src="../assets/img/avatar.png" class="menu-img">
+                    </center>
+
+                    <div class="menu">
+                        <ul>
+                            <li><a href="home.html">Inicio</a></li>
+                            <li><a href="#" id="cursosList" class="active">Cursos</a></li>
+                            <li><a href="registro_pagos.html">Pagos</a></li>
+                            <li><a href="matricula.html">Matricula</a></li>
+                            <li onclick="closedLogin()"><a href="#" id="close">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="col-md-12">
+                    <div class="container">
+                        <div class="card h-100 jumbotron my-4">
+                            <!-- form start -->
+
+                            <center>
+                                <h1>CURSOS REGISTRADOS </h1>
+                            </center>
+
+                        </div>
+                    </div>
+                    <!-- /.container -->
+                    <div class="container">
+                        <div class="card h-100 jumbotron my-4">
+                            <!-- form start -->
+                            <form id="buscarCursosForm">
+                                <div class="form-header">
+                                    <h3 class="form-title"><i class="fa fa-user"> </i>Buscar curso</h3>
+                                    <div id="msgTablacursos" class="hidden"></div>
+                                </div>
+                                <div class="form-body my-4">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="text" class="form-control" id="id_bcursos" placeholder="Ingrese nombre o codigo ">
+                                        </div>
+                                        <div>
+                                            <button id="buscacursos" class="btn btn-success">Actualizar registros</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row ">
+                                    <table id="tabla_cursos" class="table table-bordered table-hover table-wrapper-scroll-y ">
+                                        <thead>
+                                            <tr class="table-primary ">
+                                                <th scope="col">cod. curso</th>
+                                                <th scope="col">nombre</th>
+                                                <th scope="col">credito</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tablabody_cursos">
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                        </div>
+                    </div>
+                    <!-- /.container -->
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../controlador/formControler.js"></script>
+    <script src="../assets/js/paginate.js"></script>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+ -->
+
+</body>
+
+</html>
